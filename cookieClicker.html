@@ -27,12 +27,16 @@
 
         if (count === 10) {
           message.textContent = "You’re just getting started";
+          document.body.style.backgroundColor = "#ffd7cf"; // background color
         } else if (count === 25) {
           message.textContent = "Wow, that’s a lot of cookies";
+          document.body.style.backgroundColor = "#fff0cf"; // background color
         } else if (count === 50) {
           message.textContent = "Are you still clicking?";
+          document.body.style.backgroundColor = "#fffecf"; // background color
         } else if (count === 100) {
           message.textContent = "You win! Maybe take a break";
+          document.body.style.backgroundColor = "#deffcf"; // background color
         }
       });
     </script>

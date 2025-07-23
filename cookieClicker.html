@@ -9,10 +9,33 @@
 
   <div id="output" style="margin-top: 40px; font-size: 1.5rem;">
     <h1>Cookie Tracker</h1>
-    <button>🍪</button>
-    <h3>Cookie Count: 0</h3>
-    <p>Progress</p>
+    <button id="cookieButton">🍪</button>
+    <h3 id="counter">Cookie Count: 0</h3>
+    <p id="message"></p>
   </div>
+
+  <script>
+      const button = document.getElementById("cookieButton");
+      const counter = document.getElementById("counter");
+      const message = document.getElementById("message");
+
+      let count = 0;
+
+      button.addEventListener("click", function () {
+        count++;
+        counter.textContent = `Cookie Count: ${count}`;
+
+        if (count === 10) {
+          message.textContent = "You’re just getting started";
+        } else if (count === 25) {
+          message.textContent = "Wow, that’s a lot of cookies";
+        } else if (count === 50) {
+          message.textContent = "Are you still clicking?";
+        } else if (count === 100) {
+          message.textContent = "You win! Maybe take a break";
+        }
+      });
+    </script>
 
 </body>
 </html>
